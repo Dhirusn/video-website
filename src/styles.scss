@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #90CAF9;
+$color-primary-light: #03A9F4;
+$color-primary-dark: #03A9F4;
+$color-grey-dark-2: #E0E0E0;
+$color-grey-dark-3: #B0BEC5;
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: $color-grey-dark-2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-black;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
