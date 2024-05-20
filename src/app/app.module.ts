@@ -13,6 +13,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { TestimonialsComponent } from './shared/testimonials/testimonials.component';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TestimonialsComponent } from './shared/testimonials/testimonials.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

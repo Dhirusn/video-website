@@ -1,0 +1,12 @@
+<!-- gallery.component.html -->
+<div class="gallery">
+    <ng-container *ngFor="let item of displayedItems; let i = index">
+      <div class="gallery-item" [class.reverse]="i % 2 !== 0">
+        <img [src]="item.src" [alt]="item.title" class="gallery-image img-fluid">
+        <div class="gallery-details">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.client }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>

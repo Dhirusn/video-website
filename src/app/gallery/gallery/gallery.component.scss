@@ -1,0 +1,33 @@
+/* gallery.component.css */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: transparent;
+    // border: 1px solid #ccc;
+    // border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    height: 25vh;
+  }
+
+  .gallery-item.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .gallery-image {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .gallery-details {
+    flex: 1;
+    padding: 20px;
+  }
