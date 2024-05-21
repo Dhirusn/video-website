@@ -13,7 +13,7 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
     GalleryItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     FilterMenuComponent,

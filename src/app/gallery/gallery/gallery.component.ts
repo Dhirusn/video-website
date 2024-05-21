@@ -1,26 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import Plyr from 'plyr';
+
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })
-export class GalleryComponent implements OnInit {
-  items = [
-    { src: 'https://picsum.photos/id/1/200/300', title: 'SAQ INSPIRE', client: 'SAQ', category: 'art' },
-    { src: 'https://picsum.photos/id/1/200/300', title: 'COMMERCIAL TITLE', client: 'CLIENT NAME', category: 'commercial' },
-    // Add more items as needed
+export class GalleryComponent implements OnInit, AfterViewInit {
+  ngOnInit(): void {
+
+  }
+
+
+  videos = [
+    { url: 'assets/videos/video_1.mp4', thumbnail: 'assets/thumbnails/thumbnail_2.jpg', isPlaying: false, tittle: "first" },
+    { url: 'assets/videos/video_1.mp4', thumbnail: 'assets/thumbnails/thumbnail_1.jpg', isPlaying: false, tittle: "second" },
+    { url: 'assets/videos/video_1.mp4', thumbnail: 'assets/thumbnails/thumbnail_2.jpg', isPlaying: false, tittle: "third" },
+    { url: 'assets/videos/video_1.mp4', thumbnail: 'assets/thumbnails/thumbnail_1.jpg', isPlaying: false, tittle: "fourth" },
+    // Add more videos as needed
   ];
 
-  displayedItems = this.items;
+  @ViewChildren('videoRef') videoElements: QueryList<ElementRef> | undefined;
 
-  ngOnInit() {
-    window.addEventListener('filterCategory', (event: any) => {
-      this.filterItems(event.detail);
+  players: Plyr[] = [];
+
+  ngAfterViewInit() {
+    if (this.videoElements == null) return;
+    this.videoElements.forEach((videoElement, index) => {
+      videoElement.nativeElement.addEventListener('mouseover', () => {
+        videoElement.nativeElement.play();
+      });
+
+      videoElement.nativeElement.addEventListener('mouseout', () => {
+        videoElement.nativeElement.pause();
+      });
     });
   }
 
-  filterItems(category: string) {
-    this.displayedItems = category === 'all' ? this.items : this.items.filter(item => item.category === category);
+  getVideoClass(index: number) {
+    const positions = ['right', 'left', 'center', 'center'];
+    return positions[index % positions.length];
   }
 }

@@ -1,12 +1,27 @@
-<!-- gallery.component.html -->
-<div class="gallery">
-    <ng-container *ngFor="let item of displayedItems; let i = index">
-      <div class="gallery-item" [class.reverse]="i % 2 !== 0">
-        <img [src]="item.src" [alt]="item.title" class="gallery-image img-fluid">
-        <div class="gallery-details">
-          <h2>{{ item.title }}</h2>
-          <p>{{ item.client }}</p>
-        </div>
+<div class="gallery container-fluid">
+  <div *ngFor="let video of videos; let i = index" [ngClass]="getVideoClass(i)" class="video-container row" [ngClass]="{
+    'justify-content-end': i % 2 === 0,
+    'justify-content-start': i % 2 === 1,
+  }">
+    <div class="col-6 position-relative">
+      <figure class="img-item">
+        <img [src]="video.thumbnail" [style.display]="video.isPlaying ? 'none' : 'block'"
+          class="video-thumbnail img-fluid">
+        <figcaption class="img-content">
+          <h2 class="title"></h2>
+          <h3 class="category"></h3>
+        </figcaption>
+      </figure>
+      <div class="video-item position-absolute">
+        <video #videoRef [id]="'video_' + i" class="video-player" style="display: none;">
+          <source [src]="video.url" type="video/mp4">
+        </video>
       </div>
-    </ng-container>
+      <div class="figure-content">
+        <span class="img-content">
+          <h2 class="title" style="display: none;">{{video.tittle}}</h2>
+        </span>
+      </div>
+    </div>
   </div>
+</div>
