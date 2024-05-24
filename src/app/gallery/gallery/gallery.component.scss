@@ -1,70 +1,38 @@
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.video-container {
+/* video-thumbnail.component.css */
+.thumbnail {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
   position: relative;
+  width: 50vw; /* Set a responsive width */
+  height: 50vh; /* Set a responsive height */
+  overflow: hidden; /* Ensure content stays within the bounds */
+}
+
+.thumbnail img,
+.thumbnail video {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
-.video-thumbnail {
-  width: 100%;
-  cursor: pointer;
+.thumbnail video {
+  opacity: 0; /* Hide video initially */
 }
 
-.video-player {
-  width: 100%;
-  height: auto;
-}
-
-.right {
-  order: 1;
-}
-
-.left {
-  order: 2;
-}
-
-.center {
-  order: 3;
-  width: 100%;
-  max-width: 100%;
-}
-
-.video-container:hover .video-thumbnail {
-  display: none;
-  /* Hide the image when the container is hovered */
-}
-
-.video-container:hover .video-player {
-  display: block;
-  /* Show the video when the container is hovered */
-}
-
-.img-item {
-  width: 100%;
-  height: 500px;
-  cursor: pointer;
-  overflow: hidden;
-
-  &:hover .img-content-hover {
-    display: block;
+@media (max-width: 768px) {
+  .thumbnail {
+    width: 80vw; /* Adjust width for smaller screens */
+    height: 45vh; /* Adjust height for smaller screens */
   }
 }
 
-.video-thumbnail {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  transform: scale(1);
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-  &:hover .img-content .title{
-    display: block;
+@media (max-width: 480px) {
+  .thumbnail {
+    width: 100vw; /* Adjust width for very small screens */
+    height: 56.25vh; /* Maintain aspect ratio (16:9) for very small screens */
   }
 }

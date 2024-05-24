@@ -1,52 +1,5 @@
-<div class="c-project_inner u-relative">
-    <a href="https://lekhoa.com/projects/la-jungle-du-capital-emile-bilodeau/" class="c-project_link"
-        id="project-id-1780">
-        <div class="u-relative">
-            <div class="c-figure_transition"></div>
-            <figure class="c-figure -parallax || o-ratio u-16:9 || c-project_img" data-module-project-image="m396"
-                data-id="project-video-id-1780">
-                <div class="c-figure_inner is-inview" data-project-image="hover" data-scroll="" data-scroll-speed="-1"
-                    style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 3.57187, 0, 1);">
-                    <div class="c-figure_img">
-                        <img data-load-src="https://lekhoa.com/wp-content/uploads/2021/04/lajungle_01-1.jpg"
-                            alt="La jungle du capital - Émile Bilodeau"
-                            src="https://lekhoa.com/wp-content/uploads/2021/04/lajungle_01-1.jpg">
-                    </div>
-
-                    <div class="c-figure_video || c-project_video">
-                        <iframe data-module-vimeo-player="project-video-id-1780"
-                            data-src="https://player.vimeo.com/video/539223364?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1&amp;quality=720p"
-                            width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
-                            allowfullscreen="" allow="autoplay; encrypted-media"
-                            src="https://player.vimeo.com/video/539223364?controls=false&amp;autoplay=0&amp;transparent=false&amp;autopause=false&amp;loop=1&amp;muted=1&amp;quality=720p"
-                            data-ready="true" class="is-loaded"></iframe>
-                    </div>
-                </div>
-            </figure>
-        </div>
-
-        <div class="c-project_info">
-            <div class="c-project_info_line">
-                <div class="c-project_info_title-1">
-                    La jungle du capital </div>
-                <div class="c-project_info_title-2">
-                    Émile Bilodeau </div>
-
-                <div class="c-project_button">
-                    <svg class="c-project_button_hover" style="fill: #d19d4a;" role="img">
-                        <use xlink:href="https://lekhoa.com/wp-content/themes/lekhoa/dist/images/images.svg#pastille-1">
-                        </use>
-                    </svg>
-                </div>
-            </div>
-            <h2 class="c-project_title || c-heading -h2 is-split" data-module-split="m397" style="">
-                <div style="display: block; text-align: center; position: relative;">
-                    <div style="display: block; text-align: center; position: relative;"> Music</div>
-                </div>
-                <div style="display: block; text-align: center; position: relative;">
-                    <div style="display: block; text-align: center; position: relative;">video </div>
-                </div>
-            </h2>
-        </div>
-    </a>
+<!-- video-thumbnail.component.html -->
+<div class="thumbnail" (mouseover)="playVideo()" (mouseout)="pauseVideo()">
+  <img [src]="thumbnailSrc" alt="Thumbnail" />
+  <video #videoElement [src]="videoSrc" (contextmenu)="disableContextMenu($event)"></video>
 </div>

@@ -3,25 +3,8 @@
     'justify-content-end': i % 2 === 0,
     'justify-content-start': i % 2 === 1,
   }">
-    <div class="col-6 position-relative">
-      <figure class="img-item">
-        <img [src]="video.thumbnail" [style.display]="video.isPlaying ? 'none' : 'block'"
-          class="video-thumbnail img-fluid">
-        <figcaption class="img-content">
-          <h2 class="title"></h2>
-          <h3 class="category"></h3>
-        </figcaption>
-      </figure>
-      <div class="video-item position-absolute">
-        <video #videoRef [id]="'video_' + i" class="video-player" style="display: none;">
-          <source [src]="video.url" type="video/mp4">
-        </video>
-      </div>
-      <div class="figure-content">
-        <span class="img-content">
-          <h2 class="title" style="display: none;">{{video.tittle}}</h2>
-        </span>
-      </div>
+    <div class="col-md-6 col-sm-12 position-relative">
+      <app-gallery-item videoSrc="../../../assets/videos/video_1.mp4" thumbnailSrc="../../../assets/thumbnails/thumbnail_1.jpg"></app-gallery-item>
     </div>
   </div>
 </div>
