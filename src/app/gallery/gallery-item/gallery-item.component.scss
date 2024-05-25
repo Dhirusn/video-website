@@ -1,12 +1,51 @@
 /* video-thumbnail.component.css */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    text-align: center;
+    padding: 20px;
+    height: 30px;
+    width: 50px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-hover {
+    position: relative;
+}
+
+
 .thumbnail {
     display: inline-block;
     margin: 10px;
     cursor: pointer;
     position: relative;
-    width: 45vw; /* Set a responsive width */
-    height: 30vh; /* Set a responsive height */
-    overflow: hidden; /* Ensure content stays within the bounds */
+    width: 45vw;
+    /* Set a responsive width */
+    height: 30vh;
+    /* Set a responsive height */
+    overflow: hidden;
+    /* Ensure content stays within the bounds */
 }
 
 .thumbnail img,
@@ -16,23 +55,29 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition */
 }
 
 .thumbnail video {
-    opacity: 0; /* Hide video initially */
+    opacity: 0;
+    /* Hide video initially */
 }
 
 @media (max-width: 768px) {
     .thumbnail {
-        width: 80vw; /* Adjust width for smaller screens */
-        height: 45vh; /* Adjust height for smaller screens */
+        width: 80vw;
+        /* Adjust width for smaller screens */
+        height: 45vh;
+        /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .thumbnail {
-        width: 100vw; /* Adjust width for very small screens */
-        height: 56.25vh; /* Maintain aspect ratio (16:9) for very small screens */
+        width: 100vw;
+        /* Adjust width for very small screens */
+        height: 56.25vh;
+        /* Maintain aspect ratio (16:9) for very small screens */
     }
 }

@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { TestimonialsComponent } from './shared/testimonials/testimonials.component';
 import { GalleryModule } from './gallery/gallery.module';
+import { ChunkPipe } from './pipes/chunk.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GalleryModule } from './gallery/gallery.module';
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    ChunkPipe
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,14 @@
 <!-- video-thumbnail.component.html -->
-<div class="thumbnail" (mouseover)="playVideo()" (mouseout)="pauseVideo()">
-  <img [src]="thumbnailSrc" alt="Thumbnail" />
-  <video #videoElement [src]="videoSrc" (contextmenu)="disableContextMenu($event)"></video>
+<div class="gallery-item">
+  <div class="img-container overlay-hover">
+    <img [src]="thumbnailSrc" alt="Thumbnail" />
+    <div class="overlay">
+      <i class="bi bi-play"></i>
+    </div>
+  </div>
+  <div class="text">
+    <h2>item.label</h2>
+    <h3>item.title</h3>
+    <p>item.type</p>
+  </div>
 </div>

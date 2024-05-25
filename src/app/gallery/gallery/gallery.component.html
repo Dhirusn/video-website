@@ -1,10 +1,9 @@
-<div class="gallery container-fluid">
-  <div *ngFor="let video of videos; let i = index" [ngClass]="getVideoClass(i)" class="video-container row" [ngClass]="{
-    'justify-content-end': i % 2 === 0,
-    'justify-content-start': i % 2 === 1,
-  }">
-    <div class="col-md-6 col-sm-12 position-relative">
-      <app-gallery-item videoSrc="../../../assets/videos/video_1.mp4" thumbnailSrc="../../../assets/thumbnails/thumbnail_1.jpg"></app-gallery-item>
+<div class="container">
+  <div class="gallery-container">
+    <div *ngFor="let video of videos; let i = index" [ngClass]="getVideoClass(i)" >
+      <div class="position-relative">
+        <app-gallery-item thumbnailSrc="{{video.thumbnail}}"></app-gallery-item>
+      </div>
     </div>
   </div>
 </div>
