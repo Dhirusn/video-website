@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FilterMenuComponent } from './filter-menu/filter-menu.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { RouterModule } from '@angular/router';
+import { VideoDetailComponent } from './video-detail/video-detail.component';
 
 
 
@@ -10,10 +12,12 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
   declarations: [
     FilterMenuComponent,
     GalleryComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    VideoDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FilterMenuComponent,

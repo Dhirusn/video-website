@@ -1,14 +1,12 @@
 <!-- video-thumbnail.component.html -->
 <div class="gallery-item">
-  <div class="img-container overlay-hover">
-    <img [src]="thumbnailSrc" alt="Thumbnail" />
-    <div class="overlay">
-      <i class="bi bi-play"></i>
-    </div>
-  </div>
-  <div class="text">
-    <h2>item.label 1</h2>
-    <h3>item.title</h3>
-    <p>item.type</p>
-  </div>
+  <a [routerLink]="'/' + videoRouterLink">
+    <figure>
+      <img
+        [src]="thumbnailSrc"
+        alt="Street scene with person walking and others on motorbikes, all wearing masks"
+      />
+      <figcaption>{{ thumbnailCaption }}</figcaption>
+    </figure>
+  </a>
 </div>

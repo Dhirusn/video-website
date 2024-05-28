@@ -1,20 +1,8 @@
 /* video-thumbnail.component.css */
 .gallery-container {
+  list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.position-relative {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .gallery-container {
-    grid-template-columns: 1fr;
-  }
-
-  .position-relative {
-    margin-bottom: 15px;
-  }
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  width: 70rem;
 }

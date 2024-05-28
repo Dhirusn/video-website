@@ -1,9 +1,22 @@
-<div class="container">
-  <div class="gallery-container">
-    <div *ngFor="let video of videos; let i = index" [ngClass]="getVideoClass(i)" >
+<div
+  class="container-lg"
+  style="
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  "
+>
+  <ul class="gallery-container">
+    <li
+      *ngFor="let video of videos; let i = index"
+    >
       <div class="position-relative">
-        <app-gallery-item thumbnailSrc="{{video.thumbnail}}"></app-gallery-item>
+        <app-gallery-item
+          videoRouterLink="/blog"
+          thumbnailSrc="{{ video.thumbnail }}"
+          [thumbnailCaption]="video.thumbnailCaption"
+        ></app-gallery-item>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>

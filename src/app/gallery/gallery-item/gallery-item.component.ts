@@ -7,7 +7,9 @@ import { Component, Input, ViewChild } from '@angular/core';
 })
 export class GalleryItemComponent {
   @Input() thumbnailSrc: string | undefined; // Input for thumbnail image source
+  @Input() thumbnailCaption: string | undefined; // Input for thumbnail image source
   @Input() videoSrc: string | undefined; // Input for video source
+  @Input() videoRouterLink: string | undefined; // Input for video source
   @ViewChild('videoElement') videoElement: any; // Reference to the video element
 
   playVideo() {

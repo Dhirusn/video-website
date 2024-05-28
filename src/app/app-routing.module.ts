@@ -13,13 +13,10 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'about', component: AboutComponent
+    path: 'aboutme', component: AboutComponent
   },
   {
     path: 'blog', component: BlogComponent
-  },
-  {
-    path: 'aboutme', component: AboutComponent
   },
   {
     path: 'portfolio', component: PortfolioComponent
