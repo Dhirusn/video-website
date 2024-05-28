@@ -1,4 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gallery-item',
@@ -9,20 +10,12 @@ export class GalleryItemComponent {
   @Input() thumbnailSrc: string | undefined; // Input for thumbnail image source
   @Input() thumbnailCaption: string | undefined; // Input for thumbnail image source
   @Input() videoSrc: string | undefined; // Input for video source
-  @Input() videoRouterLink: string | undefined; // Input for video source
+  @Input() videoRouterLink: string[] | undefined;
+  @Input() queryParams: { url: string } | undefined;
   @ViewChild('videoElement') videoElement: any; // Reference to the video element
-
-  playVideo() {
-    this.videoElement.nativeElement.style.opacity = '1';
-    this.videoElement.nativeElement.play();
-  }
-
-  pauseVideo() {
-    this.videoElement.nativeElement.pause();
-    this.videoElement.nativeElement.style.opacity = '0';
-  }
-
-  disableContextMenu(event: MouseEvent) {
-    event.preventDefault();
+  constructor(private router: Router) {}
+  navigate(): void {
+    debugger;
+    this.router.navigate(this.videoRouterLink!, { queryParams: this.queryParams });
   }
 }

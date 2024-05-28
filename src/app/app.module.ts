@@ -15,6 +15,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { TestimonialsComponent } from './shared/testimonials/testimonials.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { ChunkPipe } from './pipes/chunk.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,14 @@ import { ChunkPipe } from './pipes/chunk.pipe';
     FooterComponent,
     NavigationComponent,
     TestimonialsComponent,
-    ChunkPipe
+    ChunkPipe,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GalleryModule
+    GalleryModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

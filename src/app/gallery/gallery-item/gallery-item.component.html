@@ -1,9 +1,8 @@
 <!-- video-thumbnail.component.html -->
-<div class="gallery-item">
-  <a [routerLink]="'/' + videoRouterLink">
+<div class="gallery-item" (click)="navigate()">
+  <a>
     <figure>
-      <img
-        [src]="thumbnailSrc"
+      <img [src]="thumbnailSrc"
         alt="Street scene with person walking and others on motorbikes, all wearing masks"
       />
       <figcaption>{{ thumbnailCaption }}</figcaption>

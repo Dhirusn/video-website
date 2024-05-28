@@ -12,7 +12,7 @@
     >
       <div class="position-relative">
         <app-gallery-item
-          videoRouterLink="/blog"
+        [videoRouterLink]="['/video-detail']" [queryParams]="{ url: video.videoUrl }"
           thumbnailSrc="{{ video.thumbnail }}"
           [thumbnailCaption]="video.thumbnailCaption"
         ></app-gallery-item>
