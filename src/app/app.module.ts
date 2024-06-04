@@ -16,6 +16,11 @@ import { TestimonialsComponent } from './shared/testimonials/testimonials.compon
 import { GalleryModule } from './gallery/gallery.module';
 import { ChunkPipe } from './pipes/chunk.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SetBgDirective } from '../app/directives/setbg-directive/set-bg.directive';
+import { ServicesComponent } from './pages/services/services.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,13 +36,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavigationComponent,
     TestimonialsComponent,
     ChunkPipe,
+    SetBgDirective,
+    ServicesComponent,
+    BlogDetailComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GalleryModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

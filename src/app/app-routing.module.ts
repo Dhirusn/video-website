@@ -5,6 +5,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { VideoDetailComponent } from './gallery/video-detail/video-detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 
 const routes: Routes = [
   {
@@ -14,15 +17,29 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'aboutme', component: AboutComponent
+    path: 'about', component: AboutComponent
   },
   {
     path: 'blog', component: BlogComponent
   },
   {
+    path: 'services', component:ServicesComponent
+  },
+  {
     path: 'portfolio', component: PortfolioComponent
   },
-  { path: 'video-detail', component: VideoDetailComponent },
+  {
+    path: 'blog', component:BlogComponent
+  },
+  {
+    path: 'blog-detail', component:BlogDetailComponent
+  },
+  {
+    path: 'contact', component:ContactComponent
+  },
+  {
+    path: 'video-detail', component: VideoDetailComponent
+  },
   {
     path: '**', redirectTo: 'home', pathMatch: "full"
   }
