@@ -37,16 +37,12 @@
         margin-top: -210px;
     }
 
-    .hero__slider.owls-carousel .owls-dots {
-        max-width: 930px !important;
-    }
+
 }
 
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .hero__slider.owls-carousel .owls-dots {
-        max-width: 690px !important;
-    }
+
 
     .services__title {
         margin-bottom: 50px;
@@ -238,10 +234,7 @@
         padding-left: 0;
     }
 
-    .hero__slider.owls-carousel .owls-dots {
-        max-width: auto;
-        padding: 0 15px;
-    }
+
 
     .slicknav_menu {
         background: transparent;

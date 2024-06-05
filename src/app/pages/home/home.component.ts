@@ -7,6 +7,54 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  heroCustomOptions: any = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    },
+    nav: false
+  };
+
+  heroSlidesStore = [
+    {
+      id: 1,
+      background: '../../../assets/img/hero/hero-1.jpg',
+      subtitle: 'For website and video editing',
+      title: 'Videographer’s Portfolio',
+      link: '#',
+      linkText: 'See more about us'
+    },
+    {
+      id: 2,
+      background: '../../../assets/img/hero/hero-1.jpg',
+      subtitle: 'For website and video editing',
+      title: 'Videographer’s Portfolio',
+      link: '#',
+      linkText: 'See more about us'
+    },
+    {
+      id: 3,
+      background: '../../../assets/img/hero/hero-1.jpg',
+      subtitle: 'For website and video editing',
+      title: 'Videographer’s Portfolio',
+      link: '#',
+      linkText: 'See more about us'
+    }
+  ];
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -89,4 +137,5 @@ export class HomeComponent {
       link: '#'
     }
   ];
+
 }

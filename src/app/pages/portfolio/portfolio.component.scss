@@ -133,7 +133,9 @@
     &.blog__pagi {
       padding-top: 5px;
     }
-
+    a{
+      cursor: pointer;
+    }
     .arrow__pagination {
       font-size: 15px;
       color: $white-color;
