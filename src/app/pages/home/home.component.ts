@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { WorkItem } from '../../models/portfolio-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  constructor(private router: Router) { }
   heroCustomOptions: any = {
     loop: true,
     mouseDrag: true,
@@ -137,5 +140,73 @@ export class HomeComponent {
       link: '#'
     }
   ];
-
+  workItems: WorkItem[] = [
+    {
+      title: 'VIP Auto Tires & Service',
+      categories: ['eCommerce', 'Magento'],
+      image: 'assets/img/work/work-1.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'large'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-2.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'small'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-3.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'small'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-4.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'large'
+    },
+    {
+      title: 'VIP Auto Tires & Service',
+      categories: ['eCommerce', 'Magento'],
+      image: 'assets/img/work/work-5.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'medium'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-6.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'small'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-7.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'large'
+    },
+    {
+      title: 'VIP Auto Tires & Service',
+      categories: ['eCommerce', 'Magento'],
+      image: 'assets/img/work/work-5.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'medium'
+    },
+    {
+      title: '',
+      categories: [],
+      image: 'assets/img/work/work-6.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+      size: 'small'
+    }
+  ];
+  navigate(videoRouterLink: any, queryParams: any): void {
+    debugger
+    this.router.navigate([videoRouterLink]!, { queryParams: queryParams });
+  }
 }

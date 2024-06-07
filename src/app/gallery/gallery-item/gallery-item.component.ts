@@ -15,7 +15,6 @@ export class GalleryItemComponent {
   @ViewChild('videoElement') videoElement: any; // Reference to the video element
   constructor(private router: Router) {}
   navigate(): void {
-    debugger;
     this.router.navigate(this.videoRouterLink!, { queryParams: this.queryParams });
   }
 }

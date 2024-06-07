@@ -1,41 +1,41 @@
-<header class="header">
+<!-- app.component.html -->
+<header [ngClass]="{'fixed': isScrolled}" class="header">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-2">
+    <nav class="navbar bg-dark navbar-expand-lg" style="background: transparent !important; color: white;">
+      <div class="container-fluid">
         <div class="header__logo">
-          <a routerLink="home"> <img src="../../../assets/img/logo.png" alt="" /></a>
+          <a routerLink="home">
+            <img src="../../../assets/img/logo.png" alt="" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav justify-center">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="serviceses">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="contact">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="col-lg-10">
-        <div class="header__nav__option">
-          <nav class="header__nav__menu mobile-menu">
-            <ul>
-              <li class="active"><a routerLink="home">Home</a></li>
-              <li><a routerLink="about">About</a></li>
-              <li><a routerLink="portfolio">Portfolio</a></li>
-              <li><a routerLink="services">Services</a></li>
-              <li>
-                <a href="#">Pages</a>
-                <ul class="dropdown">
-                  <li><a routerLink="about">About</a></li>
-                  <li><a routerLink="portfolio">Portfolio</a></li>
-                  <li><a routerLink="blog">Blog</a></li>
-                  <li><a routerLink="blog-detail">Blog Details</a></li>
-                </ul>
-              </li>
-              <li><a routerLink="contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="header__nav__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="mobile-menu-wrap"></div>
+    </nav>
   </div>
 </header>
