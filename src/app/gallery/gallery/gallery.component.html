@@ -1,22 +1,50 @@
-<div
-  class="container-lg"
-  style="
+<div class="container-fluid pt-3" style="background: #100028;">
+  <div class="container-lg" style="
     display: flex;
     align-content: center;
     justify-content: center;
-  "
->
-  <ul class="gallery-container">
-    <li
-      *ngFor="let video of videos; let i = index"
-    >
-      <div class="position-relative">
-        <app-gallery-item
-        [videoRouterLink]="['/video-detail']" [queryParams]="{ url: video.videoUrl }"
-          thumbnailSrc="{{ video.thumbnail }}"
-          [thumbnailCaption]="video.thumbnailCaption"
-        ></app-gallery-item>
+    flex-direction: column;
+  ">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="portfolio__filter">
+          <li [class.active]="currentFilter === '*'" (click)="changeFilter('*')">
+            All
+          </li>
+          <li [class.active]="currentFilter === 'branding'" (click)="changeFilter('branding')">
+            Branding
+          </li>
+          <li [class.active]="currentFilter === 'digital-marketing'" (click)="changeFilter('digital-marketing')">
+            Digital marketing
+          </li>
+          <li [class.active]="currentFilter === 'web'" (click)="changeFilter('web')">
+            Web
+          </li>
+          <li [class.active]="currentFilter === 'photography'" (click)="changeFilter('photography')">
+            Photography
+          </li>
+          <li [class.active]="currentFilter === 'ecommerce'" (click)="changeFilter('ecommerce')">
+            eCommerce
+          </li>
+        </ul>
       </div>
-    </li>
-  </ul>
+    </div>
+    <div class="sorting-controls" style="margin-bottom: 20px; text-align: center;">
+      <label for="sortCriteria" style="margin-right: 10px;">Sort by: </label>
+      <select id="sortCriteria" (change)="onSortChange($event)" style="padding: 5px;">
+        <option value="title">Title</option>
+        <option value="date">Date</option>
+      </select>
+    </div>
+
+
+    <ul class="row gallery-container" style="list-style: none; padding: 0;">
+      <li class="col-lg-4 col-md-6 col-sm-12" *ngFor="let video of sortedVideos; let i = index" [@listAnimation]="sortedVideos.length">
+        <div class="position-relative" style="cursor:pointer;">
+          <app-gallery-item [videoRouterLink]="['/video-detail']" [queryParams]="{ url: video.videoUrl }"
+            [thumbnailSrc]="video.thumbnail" [thumbnailCaption]="video.thumbnailCaption"></app-gallery-item>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -23,19 +23,19 @@ const routes: Routes = [
     path: 'blog', component: BlogComponent
   },
   {
-    path: 'services', component:ServicesComponent
+    path: 'services', component: ServicesComponent
   },
   {
     path: 'portfolio', component: PortfolioComponent
   },
   {
-    path: 'blog', component:BlogComponent
+    path: 'blog', component: BlogComponent
   },
   {
-    path: 'blog-detail', component:BlogDetailComponent
+    path: 'blog-detail', component: BlogDetailComponent
   },
   {
-    path: 'contact', component:ContactComponent
+    path: 'contact', component: ContactComponent
   },
   {
     path: 'video-detail', component: VideoDetailComponent
@@ -46,7 +46,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top', // Add this line for scroll to top behavior
+    anchorScrolling: 'enabled', // Optional: Enable anchor scrolling
+    scrollOffset: [0, 64] // Optional: Adjust scroll offset if you have a fixed header
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

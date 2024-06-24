@@ -1,8 +1,15 @@
-/* video-thumbnail.component.css */
-.gallery-container {
-  list-style: none;
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  width: 70rem;
-}
+.sorting-controls {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .sorting-controls label {
+    margin-right: 10px;
+  }
+
+  .sorting-controls select {
+    padding: 5px;
+    font-size: 14px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Optional: add border for better visibility */
+  }
