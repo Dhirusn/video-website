@@ -1,5 +1,6 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { VideoDetail } from '../../models/portfolio-item';
 
 @Component({
   selector: 'app-gallery-item',
@@ -12,9 +13,16 @@ export class GalleryItemComponent {
   @Input() videoSrc: string | undefined; // Input for video source
   @Input() videoRouterLink: string[] | undefined;
   @Input() queryParams: { url: string } | undefined;
-  @ViewChild('videoElement') videoElement: any; // Reference to the video element
-  constructor(private router: Router) {}
+  @ViewChild('videoElement') videoElement: any; // Reference to the video element\
+  @Input() videoDetails!: VideoDetail; // Input for video details
+
+  constructor(private router: Router) { }
   navigate(): void {
-    this.router.navigate(this.videoRouterLink!, { queryParams: this.queryParams });
+    this.router.navigate(this.videoRouterLink!, {
+      queryParams: {
+        ...this.queryParams,
+        videoDetails: JSON.stringify(this.videoDetails)
+      }
+    });
   }
 }

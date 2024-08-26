@@ -29,19 +29,12 @@
         </ul>
       </div>
     </div>
-    <div class="sorting-controls" style="margin-bottom: 20px; text-align: center;">
-      <label for="sortCriteria" style="margin-right: 10px;">Sort by: </label>
-      <select id="sortCriteria" (change)="onSortChange($event)" style="padding: 5px;">
-        <option value="title">Title</option>
-        <option value="date">Date</option>
-      </select>
-    </div>
 
-
-    <ul class="row gallery-container" style="list-style: none; padding: 0;">
-      <li class="col-lg-4 col-md-6 col-sm-12" *ngFor="let video of sortedVideos; let i = index" [@listAnimation]="sortedVideos.length">
+    <ul class="row gallery-container" style="list-style: none; padding: 0;min-height: 295px;">
+      <li class="col-lg-4 col-md-6 col-sm-12" *ngFor="let video of sortedVideos; let i = index"
+        [@listAnimation]="sortedVideos.length">
         <div class="position-relative" style="cursor:pointer;">
-          <app-gallery-item [videoRouterLink]="['/video-detail']" [queryParams]="{ url: video.videoUrl }"
+          <app-gallery-item [videoDetails]="video" [videoRouterLink]="['/video-detail']" [queryParams]="{ url: video.videoUrl }"
             [thumbnailSrc]="video.thumbnail" [thumbnailCaption]="video.thumbnailCaption"></app-gallery-item>
         </div>
       </li>

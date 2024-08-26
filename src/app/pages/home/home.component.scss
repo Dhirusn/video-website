@@ -2,12 +2,10 @@
 
 .hero {
     width: 100%;
-    min-height: 50dvh;
-    max-height: 100dvh;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: #100028;
+    height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transform: translate3d(0, 0, 0);
 }
 
@@ -168,4 +166,42 @@
 }
 .work__item__hover ul li:last-child:after {
     display: none;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.card-1 {
+    background-color: #0b1d4e;
+}
+
+.card-2 {
+    background-color: #3364ff;
+}
+
+.card-3 {
+    background-color: #ffd100;
+    color: #000;
+}
+
+.card-4 {
+    background-color: #cdaf9b;
+}
+
+.cards-wrapper .card:hover {
+    transform: scale(1.05);
+}
+
+.cards-wrapper .card:hover ~ .card {
+    filter: blur(5px);
+}
+
+/* When hovering over any card, other cards blur */
+.cards-wrapper .card:not(:hover) {
+    transition: filter 0.3s ease;
 }

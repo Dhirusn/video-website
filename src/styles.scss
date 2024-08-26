@@ -27,8 +27,72 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+/* styles.css or styles.scss */
+:root {
+    --background-color: #121212;
+    --primary-text-color: #e0e0e0;
+    --secondary-text-color: #b0b0b0;
+    --accent-color: #bb86fc;
+    --highlight-color: #03dac6;
+    --error-color: #cf6679;
+    --global-color-primary: #fffdf3;
+    --global-color-secondary: #0a0a0a;
+    --global-color-text: #fff9de;
+    --global-color-accent: #fedf51;
+    --global-color-ed62c7a: #242424;
+    --global-color-bf528b5: #fed30e;
+    --global-color-291ee4f: #ef0000;
+    --global-color-fbb3b43: #ffffff00;
+    --global-typography-primary-font-family: "Exo";
+    --global-typography-primary-font-weight: 600;
+    --global-typography-secondary-font-family: "Exo";
+    --global-typography-secondary-font-weight: 400;
+    --global-typography-text-font-family: "Inter";
+    --global-typography-text-font-size: 1rem;
+    --global-typography-text-font-weight: 400;
+    --global-typography-text-line-height: 1.4em;
+    --global-typography-accent-font-family: "Inter";
+    --global-typography-accent-font-size: 0.938rem;
+    --global-typography-accent-font-weight: 700;
+    --global-typography-accent-line-height: 1em;
+    --global-typography-6006112-font-family: "Exo";
+    --global-typography-6006112-font-size: 5rem;
+    --global-typography-6006112-font-weight: 700;
+    --global-typography-6006112-line-height: 1.2em;
+    --global-typography-d311a36-font-family: "Exo";
+    --global-typography-d311a36-font-size: 4rem;
+    --global-typography-d311a36-font-weight: 700;
+    --global-typography-d311a36-line-height: 1.2em;
+    --global-typography-f7d2aa8-font-family: "Exo";
+    --global-typography-f7d2aa8-font-size: 3rem;
+    --global-typography-f7d2aa8-font-weight: 600;
+    --global-typography-f7d2aa8-line-height: 1.2em;
+    --global-typography-2e67c23-font-family: "Exo";
+    --global-typography-2e67c23-font-size: 1.75rem;
+    --global-typography-2e67c23-font-weight: 600;
+    --global-typography-2e67c23-line-height: 1.2em;
+    --global-typography-e38ee56-font-family: "Exo";
+    --global-typography-e38ee56-font-size: 1.25rem;
+    --global-typography-e38ee56-font-weight: 600;
+    --global-typography-e38ee56-line-height: 1.2em;
+    --global-typography-8a7e382-font-family: "Exo";
+    --global-typography-8a7e382-font-size: 1.063rem;
+    --global-typography-8a7e382-font-weight: 700;
+    --global-typography-8a7e382-text-transform: uppercase;
+    --global-typography-8a7e382-line-height: 1.2em;
+    --global-typography-01bbb0a-font-family: "Inter";
+    --global-typography-01bbb0a-font-size: 0.813rem;
+    --global-typography-01bbb0a-font-weight: 400;
+    --global-typography-01bbb0a-line-height: 1.2em;
+    --global-typography-25d3204-font-family: "Exo";
+    --global-typography-25d3204-font-size: 9rem;
+    --global-typography-25d3204-font-weight: 700;
+    --global-typography-25d3204-line-height: 1.2em;
+    color: var(--e-global-color-text);
+}
 
 html,
 body {
@@ -37,7 +101,7 @@ body {
     -webkit-font-smoothing: antialiased;
     padding: 0;
     margin: 0;
-    background-color: #100028 !important;
+    background-color: var(--global-color-secondary);
 }
 
 h1,
@@ -297,7 +361,6 @@ ol {
     }
 }
 
-
 /*---------------------
   Hero
 -----------------------*/
@@ -343,8 +406,6 @@ ol {
     -o-transition: all, 0.7s;
     transition: all, 0.7s;
 }
-
-
 
 /*---------------------
   Counter
@@ -530,7 +591,6 @@ ol {
     background: url(../src/assets/img/blog/blog-1.jpg);
     background-size: cover;
 }
-
 
 /*---------------------
   Call To Active
@@ -774,7 +834,6 @@ ol {
     padding-bottom: 60px;
 }
 
-
 .testimonial__text {
     padding: 30px 40px 25px 30px;
     border: 1px solid #3d3a64;
@@ -879,16 +938,6 @@ ol {
     background: #100028;
     padding-bottom: 50px;
 }
-
-/*---------------------
-  Logo
------------------------*/
-.logo {
-    background: #100028;
-    padding: 100px 20px;
-}
-
-
 
 /*---------------------
   Portfolio
@@ -1509,12 +1558,9 @@ ol {
     .counter__item.four__item {
         margin-top: -210px;
     }
-
-
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
     .services__title {
         margin-bottom: 50px;
     }
@@ -1700,8 +1746,6 @@ ol {
     .about__text {
         padding-left: 0;
     }
-
-
 
     .slicknav_menu {
         background: transparent;

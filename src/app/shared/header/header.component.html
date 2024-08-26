@@ -1,22 +1,15 @@
-<!-- app.component.html -->
+<!-- app.component.html
 <header [ngClass]="{'fixed': isScrolled}" class="header">
   <div class="container">
-    <nav class="navbar bg-dark navbar-expand-lg" style="background: transparent !important; color: white;">
+      <nav class="navbar bg-dark navbar-expand-lg" style="background: transparent !important; color: white;">
       <div class="container-fluid">
         <div class="header__logo">
           <a routerLink="home">
             <img src="../../../assets/img/logo.png" alt="" />
           </a>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
@@ -42,3 +35,44 @@
     </nav>
   </div>
 </header>
+-->
+<nav [ngClass]="{'fixed': isScrolled}" class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm header">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="logo me-2">
+        <!-- SVG or Image for Logo -->
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="purple" class="bi bi-caret-down-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M7.247 11.14 2.451 5.658c-.566-.625-.11-1.658.753-1.658h9.592c.864 0 1.318 1.033.753 1.658l-4.796 5.482c-.566.647-1.535.647-2.101 0z" />
+        </svg>
+      </div>
+      <span class="fw-bold">LOG0</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Modules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Archives</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
