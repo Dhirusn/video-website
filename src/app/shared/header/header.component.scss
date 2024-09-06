@@ -50,13 +50,21 @@
   background: #01204e;
 }
 
-.header.fixed {
+.fixed {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  // background: transparent;
-  color: white; /* Adjust the background color as needed */
-  transition: top 7s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9); /* Start with transparent background */
+  color: white;
+  transform: translateY(-100%);
+  transition:
+    background-color 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.fixed.scrolled {
+  background-color: rgba(0, 0, 0, 1); /* Full background color */
+  transform: translateY(0);
 }

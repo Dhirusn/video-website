@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { provideRouter, RouterModule, Routes, withViewTransitions } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -8,6 +8,7 @@ import { VideoDetailComponent } from './gallery/video-detail/video-detail.compon
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -46,11 +47,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'top', // Add this line for scroll to top behavior
-    anchorScrolling: 'enabled', // Optional: Enable anchor scrolling
-    scrollOffset: [0, 64] // Optional: Adjust scroll offset if you have a fixed header
-  })],
+  imports: [RouterModule.forRoot(routes)],
+  providers:[provideRouter(routes, withViewTransitions()),
+    provideHttpClient(withFetch())],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

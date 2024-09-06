@@ -16,5 +16,6 @@ export class HeaderComponent {
     } else {
       this.isScrolled = false;
     }
+    console.log(number);
   }
 }

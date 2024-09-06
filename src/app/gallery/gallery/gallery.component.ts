@@ -25,12 +25,12 @@ export class GalleryComponent implements OnInit, AfterViewInit {
 
 
   videos: Array<VideoDetail> = [
-    { thumbnail: 'https://images.unsplash.com/photo-1633515257379-5fda985bd57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400', category: "ecommerce", thumbnailCaption: "first", videoUrl: "", date: new Date(2024, 5, 12) },
-    { thumbnail: 'https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400', category: "ecommerce", thumbnailCaption: "second", videoUrl: "", date: new Date(2024, 5, 2) },
-    { thumbnail: 'https://images.unsplash.com/photo-1568444438385-ece31a33ce78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400', category: "digital", thumbnailCaption: "third", videoUrl: "", date: new Date(2024, 1, 12) },
-    { thumbnail: 'https://images.unsplash.com/photo-1633635146842-12d386e64058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400', category: "branding", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 2, 12) },
-    { thumbnail: 'https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400', category: "digital-marketing", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 3, 12) },
-    { thumbnail: 'https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA0OTI3Nw&ixlib=rb-1.2.1&q=80&w=400', category: "web", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 6, 12) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-1.jpg', category: "ecommerce", thumbnailCaption: "first", videoUrl: "", date: new Date(2024, 5, 12) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-2.jpg', category: "ecommerce", thumbnailCaption: "second", videoUrl: "", date: new Date(2024, 5, 2) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-3.jpg', category: "digital", thumbnailCaption: "third", videoUrl: "", date: new Date(2024, 1, 12) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-4.jpg', category: "branding", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 2, 12) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-5.jpg', category: "digital-marketing", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 3, 12) },
+    { thumbnail: '../../../assets/img/portfolio/portfolio-6.jpg', category: "web", thumbnailCaption: "fourth", videoUrl: "", date: new Date(2024, 6, 12) },
   ];
   sortedVideos: Array<VideoDetail> = [];
 

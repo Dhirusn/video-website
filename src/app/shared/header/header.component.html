@@ -36,9 +36,9 @@
   </div>
 </header>
 -->
-<nav [ngClass]="{'fixed': isScrolled}" class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm header">
+<nav [ngClass]="{'fixed': isScrolled, 'scrolled': isScrolled}" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
+    <a class="navbar-brand d-flex align-items-center" >
       <div class="logo me-2">
         <!-- SVG or Image for Logo -->
         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="purple" class="bi bi-caret-down-fill"
@@ -58,19 +58,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" routerLink="home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Modules</a>
+          <a class="nav-link" routerLink="about">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Posts</a>
+          <a class="nav-link" routerLink="portfolio">Portfolio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Archives</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pages</a>
+        <li class="nav-item" routerLink="contact">
+          <a class="nav-link" >Pages</a>
         </li>
       </ul>
     </div>
